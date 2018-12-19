@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".detail.RecipeDetailActivity"
-    tools:showIn="@layout/activity_recipe_detail"
-    >
+    tools:context=".detail.RecipeDetailActivity">
 
-  <TextView
-      android:id="@+id/recipeName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="8dp"
-      android:text="NEVER ASSIGNED"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".detail.RecipeDetailActivity"
+        tools:showIn="@layout/activity_recipe_detail">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/recipe_1" />
+
+        <TextView
+            android:id="@+id/recipeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_detail_title"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_bookmark_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recipeTitle"
+            app:layout_constraintStart_toEndOf="@+id/recipeTitle"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/recipe_detail_ingredients"
+            app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/recipe_detail_description"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

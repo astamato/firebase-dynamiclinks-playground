@@ -1,4 +1,9 @@
 <resources>
-  <string name="app_name">My Recipes</string>
-  <string name="title_activity_recipe_detail">Recipe Detail Screen</string>
+    <string name="app_name">My Recipes</string>
+    <string name="title_activity_recipe_detail">Recipe Detail Screen</string>
+
+
+    <string name="recipe_detail_title">Title</string>
+    <string name="recipe_detail_description">Description</string>
+    <string name="recipe_detail_ingredients">Ingredients</string>
 </resources>
