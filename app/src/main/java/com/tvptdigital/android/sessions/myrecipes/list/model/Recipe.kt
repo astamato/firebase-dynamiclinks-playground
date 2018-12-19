@@ -1,6 +1,6 @@
 package com.tvptdigital.android.sessions.myrecipes.list.model
 
-import android.support.annotation.DrawableRes
+import androidx.annotation.DrawableRes
 
 data class Recipe(val id: Int, val name: String, val types: ArrayList<RecipeType>?,
     val difficulty: RecipeDifficulty, val steps: String, @DrawableRes val picSmall: Int)

@@ -5,22 +5,15 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.dynamiclinks.DynamicLink
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 import com.tvptdigital.android.sessions.myrecipes.R
 import com.tvptdigital.android.sessions.myrecipes.list.model.Recipe
-import kotlinx.android.synthetic.main.activity_recipe_detail.fab
-import kotlinx.android.synthetic.main.activity_recipe_detail.toolbar
-import kotlinx.android.synthetic.main.content_recipe_detail.recipeName
-import com.google.firebase.dynamiclinks.ShortDynamicLink
-import com.google.android.gms.tasks.Task
-import android.support.annotation.NonNull
-import android.support.v7.app.AlertDialog
-import android.view.View.OnClickListener
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.dynamiclinks.DynamicLink
+import kotlinx.android.synthetic.main.activity_recipe_detail.*
+import kotlinx.android.synthetic.main.content_recipe_detail.*
 
 
 class RecipeDetailActivity : AppCompatActivity() {
