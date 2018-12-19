@@ -42,7 +42,7 @@ class RecipeDetailActivity : AppCompatActivity() {
           if (pendingDynamicLinkData != null) {
             deepLink = pendingDynamicLinkData.link
 
-            recipeId = deepLink.getQueryParameter("id").toInt()
+            recipeId = deepLink?.getQueryParameter("id")!!.toInt()
             Log.d("RecipeDetailActivityTAG", recipeId.toString())
             handler.post { updateView(recipeId) }
           }
@@ -58,9 +58,9 @@ class RecipeDetailActivity : AppCompatActivity() {
       val link = FirebaseDynamicLinks.getInstance().createDynamicLink()
           .setLink(Uri.parse("https://www.myrecipes.com/?id=$recipeId"))
           //the domain has to be aligned with google services file and the firebase console
-          .setDynamicLinkDomain("myrecipesandroidsessions.page.link")
+          .setDomainUriPrefix("https://myrecipesandroidsessions.page.link")
           .setAndroidParameters(DynamicLink.AndroidParameters.Builder().build())
-          //we can chose to create async a short link
+          // we can chose to create async a short link
           // we can choose to create a long one and then call to shorten
           .buildDynamicLink()
 
